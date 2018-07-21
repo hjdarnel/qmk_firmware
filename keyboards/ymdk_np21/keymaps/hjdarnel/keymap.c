@@ -3,14 +3,14 @@
 
 #define _NP 0
 #define _BL  1
-#define KC_CST1 KC_RCTRL(KC_KP_0)
-#define KC_CST2 KC_RALT(KC_KP_0)
-#define KC_CST3 KC_RCTRL(KC_KP_1)
-#define KC_CST4 KC_RALT(KC_KP_1)
-#define KC_CST5 KC_RCTRL(KC_KP_2)
-#define KC_CST6 KC_RALT(KC_KP_2)
-#define KC_CST7 KC_RCTRL(KC_KP_3)
-#define KC_CST8 KC_RALT(KC_KP_3)
+#define KC_CST1 RCTL(KC_KP_0)
+#define KC_CST2 RALT(KC_KP_0)
+#define KC_CST3 RCTL(KC_KP_1)
+#define KC_CST4 RALT(KC_KP_1)
+#define KC_CST5 RCTL(KC_KP_2)
+#define KC_CST6 RALT(KC_KP_2)
+#define KC_CST7 RCTL(KC_KP_3)
+#define KC_CST8 RALT(KC_KP_3)
 
 enum custom_keycodes {
   NP = SAFE_RANGE,
