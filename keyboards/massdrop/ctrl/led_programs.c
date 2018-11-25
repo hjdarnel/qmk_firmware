@@ -26,7 +26,7 @@ led_setup_t leds_teal_salmon[] = {
     { .end = 1 },
 };
 
-//Teal <-> Salmon
+//Teal <-> Purple
 led_setup_t leds_teal_purple[] = {
     { .hs = 0,  .he = 25,   .rs = 24,  .re = 24,  .gs = 215, .ge = 215,  .bs = 204, .be = 204, .ef = EF_OVER | EF_SCR_R },
     { .hs = 25, .he = 50,   .rs = 24,  .re = 82,  .gs = 215, .ge = 45,   .bs = 204, .be = 168, .ef = EF_OVER | EF_SCR_R },
@@ -34,6 +34,24 @@ led_setup_t leds_teal_purple[] = {
     { .hs = 75, .he = 100,  .rs = 82,  .re = 24,  .gs = 45,  .ge = 215,  .bs = 168, .be = 204, .ef = EF_OVER | EF_SCR_R },
     { .end = 1 },
 };
+
+//Teal <-> Purple
+led_setup_t leds_blue_orange[] = {
+    { .hs = 0,  .he = 25,   .rs = 57,   .re = 57,   .gs = 73,  .ge = 73,  .bs = 171, .be = 171, .ef = EF_OVER | EF_SCR_R },
+    { .hs = 25, .he = 50,   .rs = 57,   .re = 244,  .gs = 73,  .ge = 81,  .bs = 171, .be = 30, .ef = EF_OVER | EF_SCR_R },
+    { .hs = 50, .he = 75,   .rs = 244,  .re = 244,  .gs = 81,  .ge = 81,  .bs = 30, .be = 30, .ef = EF_OVER | EF_SCR_R },
+    { .hs = 75, .he = 100,  .rs = 244,  .re = 57,   .gs = 81,  .ge = 73,  .bs = 30, .be = 171, .ef = EF_OVER | EF_SCR_R },
+    { .end = 1 },
+};
+
+// //Teal <-> Purple
+// led_setup_t leds_blue_orange[] = {
+//     { .hs = 0,  .he = 25,   .rs = 0,   .re = 0,   .gs = 128,  .ge = 128,  .bs = 225, .be = 225, .ef = EF_OVER | EF_SCR_R },
+//     { .hs = 25, .he = 50,   .rs = 0,   .re = 255,  .gs = 128,  .ge = 127,  .bs = 225, .be = 0, .ef = EF_OVER | EF_SCR_R },
+//     { .hs = 50, .he = 75,   .rs = 255,  .re = 255,  .gs = 127,  .ge = 127,  .bs = 0, .be = 0, .ef = EF_OVER | EF_SCR_R },
+//     { .hs = 75, .he = 100,  .rs = 255,  .re = 0,   .gs = 127,  .ge = 128,  .bs = 0, .be = 225, .ef = EF_OVER | EF_SCR_R },
+//     { .end = 1 },
+// };
 
 //Yellow
 led_setup_t leds_yellow[] = {
@@ -113,6 +131,7 @@ led_setup_t leds_rainbow_s[] = {
 //Add the new animation name to the list below following its format
 
 void *led_setups[] = {
+    leds_blue_orange,
     leds_teal_salmon,
     leds_rainbow_s,
     leds_rainbow_ns,
