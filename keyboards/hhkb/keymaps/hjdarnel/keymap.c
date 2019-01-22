@@ -10,6 +10,7 @@
 #define KC_CTLC LCTL(KC_C)
 #define KC_CTLU LCTL(KC_U)
 #define KC_CTCU LGUI(LCTL(KC_V))
+#define KC_CSIX LCTL(KC_CIRC)
 
 enum custom_keycodes {
     MY_CUSTOM_MACRO = SAFE_RANGE
@@ -26,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      |-------+---+---+---+---+---+---+---+---+---+---+-------+-----+-------+---|
      | L2    | A | S | D | F | G | H | J | K | L | ; | '     | Ent |       |   |
      |-------+---+---+---+---+---+---+---+---+---+---+-------+-----+-------+---|
-     | SC Shf| Z | X | C | V | B | N | M | , | . | / | SC SHF| L1 |       |   |
+     | Shift | Z | X | C | V | B | N | M | , | . | / | Shift | L1 |       |   |
      |-------+---+---+---+---+---+---+---+---+---+---+-------+-----+-------+---|
 
             |------+------+-----------------------+------+------|
@@ -38,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_GESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, KC_BSLS, KC_GRV,
         KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC, KC_BSPC,
         MO(2), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_ENT,
-        KC_LSPO, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSPC, MO(HHKB),
+        KC_LSHIFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSHIFT, MO(HHKB),
         KC_LALT, KC_LGUI, /*        */ KC_SPC, KC_LCTL, KC_RALT),
 
     /* Layer 1: HHKB mode (HHKB Fn)
@@ -66,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______),
 
         /* Layer 2: Extra stuff (Control key)
-      |------+-----+-----+-----+--------+----+----+----+-----+-----+-----+-----+-------+-------+-----|
+      |------+-----+-----+-----+--------+----+ CSh^+----+-----+-----+-----+-----+-------+-------+-----|
       |      |     |     |     |        |    |    |    |     |     | Mut | VoD | VoU   |       | Ctl`|
       |------+-----+-----+-----+--------+----+----+----+-----+-----+-----+-----+-------+-------+-----|
       |      |     |     |     |        |    |    |    | CtlU|     |     |     |       |       |     |
@@ -83,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
 
     [2] = LAYOUT(
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, KC_CTLG,
+        _______, _______, _______, _______, _______, _______, KC_CSIX, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, KC_CTLG,
         _______, _______, _______, _______, _______, _______, _______, KC_CTLU, _______, _______, _______, _______, _______, _______,
         _______, KC_MEDIA_REWIND, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_FAST_FORWARD, _______, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, _______, _______, MY_CUSTOM_MACRO,
         _______, _______, _______, KC_CTLC, KC_CTCU, _______, _______, _______, _______, _______, _______, _______, _______,
