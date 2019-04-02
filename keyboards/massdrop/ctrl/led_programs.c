@@ -26,20 +26,12 @@ led_setup_t leds_teal_salmon[] = {
     { .end = 1 },
 };
 
-//Red <-> Purple
-led_setup_t leds_vapor[] = {
-    { .hs = 0,  .he = 33,  .rs = 132,  .re = 132,  .gs = 0, .ge = 0, .bs = 255, .be = 255, .ef = EF_NONE },
-    { .hs = 33, .he = 66,  .rs = 132,  .re = 255, .gs = 0, .ge = 0, .bs = 255, .be = 90, .ef = EF_NONE },
-    { .hs = 66, .he = 100, .rs = 255, .re = 255, .gs = 0, .ge = 0, .bs = 90, .be = 90, .ef = EF_NONE },
-    { .end = 1 },
-};
-
 //Teal <-> Purple
-led_setup_t leds_teal_purple[] = {
-    { .hs = 0,  .he = 25,   .rs = 24,  .re = 24,  .gs = 215, .ge = 215,  .bs = 204, .be = 204, .ef = EF_OVER | EF_SCR_R },
-    { .hs = 25, .he = 50,   .rs = 24,  .re = 82,  .gs = 215, .ge = 45,   .bs = 204, .be = 168, .ef = EF_OVER | EF_SCR_R },
-    { .hs = 50, .he = 75,   .rs = 82,  .re = 82,  .gs = 45,  .ge = 45,   .bs = 168, .be = 168, .ef = EF_OVER | EF_SCR_R },
-    { .hs = 75, .he = 100,  .rs = 82,  .re = 24,  .gs = 45,  .ge = 215,  .bs = 168, .be = 204, .ef = EF_OVER | EF_SCR_R },
+led_setup_t leds_vapor[] = {
+    { .hs = 0,  .he = 25,   .rs = 132,   .re = 132,   .gs = 0,  .ge = 0,  .bs = 255, .be = 255, .ef = EF_OVER | EF_SCR_R },
+    { .hs = 25, .he = 50,   .rs = 132,   .re = 240,  .gs = 0,  .ge = 20,  .bs = 240, .be = 70, .ef = EF_OVER | EF_SCR_R },
+    { .hs = 50, .he = 75,   .rs = 240,  .re = 240,  .gs = 20,  .ge = 20,  .bs = 70, .be = 70, .ef = EF_OVER | EF_SCR_R },
+    { .hs = 75, .he = 100,  .rs = 240,  .re = 132,   .gs = 20,  .ge = 0,  .bs = 70, .be = 255, .ef = EF_OVER | EF_SCR_R },
     { .end = 1 },
 };
 
@@ -49,6 +41,15 @@ led_setup_t leds_blue_orange[] = {
     { .hs = 25, .he = 50,   .rs = 57,   .re = 244,  .gs = 73,  .ge = 81,  .bs = 171, .be = 30, .ef = EF_OVER | EF_SCR_R },
     { .hs = 50, .he = 75,   .rs = 244,  .re = 244,  .gs = 81,  .ge = 81,  .bs = 30, .be = 30, .ef = EF_OVER | EF_SCR_R },
     { .hs = 75, .he = 100,  .rs = 244,  .re = 57,   .gs = 81,  .ge = 73,  .bs = 30, .be = 171, .ef = EF_OVER | EF_SCR_R },
+    { .end = 1 },
+};
+
+//Teal <-> Purple
+led_setup_t leds_teal_purple[] = {
+    { .hs = 0,  .he = 25,   .rs = 24,  .re = 24,  .gs = 215, .ge = 215,  .bs = 204, .be = 204, .ef = EF_OVER | EF_SCR_R },
+    { .hs = 25, .he = 50,   .rs = 24,  .re = 82,  .gs = 215, .ge = 45,   .bs = 204, .be = 168, .ef = EF_OVER | EF_SCR_R },
+    { .hs = 50, .he = 75,   .rs = 82,  .re = 82,  .gs = 45,  .ge = 45,   .bs = 168, .be = 168, .ef = EF_OVER | EF_SCR_R },
+    { .hs = 75, .he = 100,  .rs = 82,  .re = 24,  .gs = 45,  .ge = 215,  .bs = 168, .be = 204, .ef = EF_OVER | EF_SCR_R },
     { .end = 1 },
 };
 
@@ -130,8 +131,8 @@ led_setup_t leds_rainbow_s[] = {
 //Add the new animation name to the list below following its format
 
 void *led_setups[] = {
-    leds_blue_orange,
     leds_vapor,
+    leds_blue_orange,
     leds_teal_salmon,
     leds_teal_purple,
     leds_rainbow_s,
