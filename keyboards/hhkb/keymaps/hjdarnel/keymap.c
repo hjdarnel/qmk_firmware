@@ -8,6 +8,7 @@
 #define _______ KC_TRNS
 #define KC_CTLG LCTL(KC_GRV)
 #define KC_CTLS LGUI(KC_BSLASH)
+#define KC_CF12 LGUI(KC_F12)
 #define KC_CTLC LCTL(KC_C)
 #define KC_CTLU LCTL(KC_U)
 #define KC_CTCU LGUI(LCTL(KC_V))
@@ -71,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       |------+-----+-----+-----+--------+----+ CSh^+----+-----+-----+-----+-----+-------+-------+-----|
       |      |     |     |     |        |    |    |    |     |     | Mut | VoD | VoU   |       | Cmd\|
       |------+-----+-----+-----+--------+----+----+----+-----+-----+-----+-----+-------+-------+-----|
-      |      | VoU |     |     |        |    |    |    | CtlU|     |     |     |       |       |     |
+      |      | VoU |CmF12|     |        |    |    |    | CtlU|     |     |     |       |       |     |
       |------+-----+-----+-----+--------+----+----+----+-----+-----+-----+-----+-------+-------+-----|
       |      | Prev| Pau | Nxt |        |    |    |    | lft | dn  |  up | rig |       |       | +:  |
       |------+-----+-----+-----+--------+----+----+----+-----+-----+-----+-----+-------+-------+-----|
@@ -86,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT(
         _______, _______, _______, _______, _______, _______, KC_CSIX, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, KC_CTLS,
-        _______, KC_VOLU, _______, _______, _______, _______, _______, KC_CTLU, _______, _______, _______, _______, _______, KC_DEL,
+        _______, KC_VOLU, KC_CF12, _______, _______, _______, _______, KC_CTLU, _______, _______, _______, _______, _______, KC_DEL,
         _______, KC_MEDIA_REWIND, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_FAST_FORWARD, _______, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, _______, _______, MY_CUSTOM_MACRO,
         _______, KC_VOLD, _______, KC_CTLC, KC_CTCU, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______)};
